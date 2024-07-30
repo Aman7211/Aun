@@ -10,6 +10,12 @@ import style from '../assets/media/swoosh.png';
 import Footer from '../components/Footer';
 import FeaturedProduct from '../components/FeaturedProduct';
 import TestimonialSection from '../components/TestimonialSection';
+import BestSellerProducts from '../components/BestSellerProducts';
+import GMP from '../assets/media/gmp.png'
+import indianFederationLogo from '../assets/media/indis.jpg'
+import ISO from '../assets/media/ISO.png'
+import MINAyushLogo from '../assets/media/AAYUSH.png'
+import { FeaturedImage } from '../components/FeaturedImage';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -32,7 +38,7 @@ const Home = () => {
   }, [currentSlide]);
 
   return (
-    <div>
+    <>
       <Header />
 
       {/* Section 1 */}
@@ -65,23 +71,23 @@ const Home = () => {
       </div>
 
       {/* Section 2 */}
-        <div className="md:text-4xl text-xl my-6 text-center font-serif ">Ancient science meets <span className='text-extrabold text-5xl text-[#9d003f] mx-3 '>Modern</span></div>
+        <div className="md:text-3xl text-xl my-7 text-center font-serif "><span className='text-extrabold text-4xl text-[#9d003f] mx-3 '>Welcome</span> to Aun Herbal Remedies, Where nature meets wellness</div>
 
 
     {/* Section 3 */}
     <div  style={{ backgroundImage: `url(${banner3})` }} className='text-center bg-cover bg-center h-auto' >
-         <h1 className=' text-[#9d003f] pt-12 mb-4 p text-3xl'>Unani <span className='text-green-800'>
-          Medicine</span></h1>
-          <p className='text-lg'>Unani medicine derives its goodness
-from natural substances.</p>
+         <h1 className=' text-[#9d003f] pt-12 mb-2 text-3xl font-semibold'>Unani <span className='text-green-800'>
+          Medicines</span></h1>
+          {/* <p className='text-lg'>Unani medicine derives its goodness
+from natural substances.</p> */}
 <div className='flex justify-center h-64'>
     <img src={img01} alt="" />
     </div>
     <div className='mx-28 my-4'>
-    At Aun Herbal, we believe in the healing potential of plants and their ability to support our well-being in a holistic way. Our journey into herbalism began with a deep respect for traditional knowledge and a desire to offer natural alternatives for modern health concerns.
-
-Our range of herbal products spans a variety of categories, including skincare, dietary supplements, aromatherapy, and more. Whether you're looking to nourish your skin with botanical-infused creams and serums, enhance your wellness routine with herbal supplements, or create a soothing sanctuary with aromatherapy blends, we have something for everyone.
-    </div>
+    A holistic healing system originating in India thousands of years ago, emphasizes the balance of mind, body, and spirit for overall well-being.
+“Aun Herbal Remedies” is seeks to bring the ancient wisdom to everyone, making it easy and accessible for people to live healthier and happier lives. By providing a wide range of natural products based on Ayurvedic and Unani principles, Aun Herbal Remedies aims to help people achieve balance in their physical, mental, and emotional health. 
+we believe that health is not merely the absence of disease but a state of complete physical, mental, and emotional well-being. Our mission is to empower individuals to take charge of their health through natural remedies, lifestyle modifications, and personalized wellness plans tailored to their unique constitution.
+  </div>
     <button className='bg-[#9d003f] text-white p-2 text-lg px-4 rounded-xl my-5 mb-20'>
      Know More
     </button>
@@ -89,14 +95,26 @@ Our range of herbal products spans a variety of categories, including skincare, 
 
 
     {/* Section4 */}
-    <div className='flex container mx-auto'>
+
+    <div className="text-center my-[60px]">
+            <div>
+              <h1 className="text-[40px] md:text-[40px] text-gray-800 font-extrabold ">Best Sellers</h1>
+            </div>
+            <div className="my-5">
+              <BestSellerProducts />
+            </div>
+          </div>
+
+
+    {/* <div className='flex container mx-auto'>
 <div className='bg-cover bg-center w-[70%]'>
 <p className='mt-20 text-5xl mx-10 font-extrabold'>Committed to </p>
 <p className='text-5xl mt-4 relative mx-10 my-2 z-10 font-extrabold'><span className='text-[#9d003f] text-4xl'>Nation</span> Building </p>
 <img src={style} alt="" className='mt-[-41px] '/>
 </div>
 <div lassName='w-[30%]'>
-<p className=' mt-20 text-xl font-medium'>Welcome to Aun Herbal, where nature meets wellness. <br/>
+<p className=' mt-20 text-xl font-medium'>
+  Welcome to Aun Herbal, where nature meets wellness. <br/>
 We are passionate about harnessing the power of <br/>nature 
 to promote health and vitality through our range of herbal products.</p>
 <button className='bg-[#9d003f] p-3 text-white text-xl my-10 rounded-lg'>
@@ -104,15 +122,14 @@ to promote health and vitality through our range of herbal products.</p>
 </button>
 </div>
 
-    </div>
+    </div> */}
 
 
     {/* Section5 */}
 
     <div className="text-center my-[60px]">
             <div>
-              <h1 className="text-[40px] md:text-[40px] text-gray-800 font-extrabold ">Product Range</h1>
-              <p className='mx-28 my-2 text-gray-800 mb-8'>We create some of the most well-known brands globally, and these brands are utilized by billions of people daily. Use this page to explore the complete list of Hamdard's brands and access more detailed information</p>
+              <h1 className="text-[40px] mt-10 md:text-[40px] text-gray-800 font-extrabold ">Our Product Range</h1>
             </div>
             <div className="my-5">
               <FeaturedProduct />
@@ -120,19 +137,68 @@ to promote health and vitality through our range of herbal products.</p>
           </div>
 
 
+          <div className='container md:mx-auto mb-8 mx-[100px]'>
+          <h1 className="text-[20px] md:text-[30px] text-center font-bold my-5">Certified</h1>
+
+                <div className='container mx-auto flex flex-col md:flex-row justify-evenly mt-5'>
+                    <div>
+                        <img src={ISO} alt="Gujarat State Yog Board Logo" title='Gujarat State Yog Board' className=' h-[150px] grayscale hover:grayscale-0' />
+                    </div>
+                    <div className='brand'>
+                        <img src={GMP} alt="Fit India Logo" title='Fit India' className='h-[150px] grayscale hover:grayscale-0'/>
+                    </div>
+                    <div className='brand'>
+                        <img src={indianFederationLogo} alt="Indian Federation Logo" title='Indian Federation of Yoga' className='h-[150px] w-[150px] grayscale hover:grayscale-0 rounded-full'/>
+                    </div>
+                    <div className='brand'>
+                        <img src={MINAyushLogo} alt="Ministry of Ayush Logo" title='Ministry of Ayush' className=' h-[150px] grayscale hover:grayscale-0' />
+                    </div>
+                </div>
+            </div>
+
+
           <div className="text-center mt-[50px]">
             <div>
-              <h1 className="text-[30px] md:text-[40px] font-extrabold">What Our Customers Say</h1>
+              <h1 className="text-[30px] md:text-[40px] font-extrabold">Our Happy Customers </h1>
             </div>
             <div className="mt-4 mb-10">
               <TestimonialSection />
             </div>
           </div>
 
+<div className='font-bold text-center text-lg'>
+  Tag us on @aunherbal remedies OR #aunherbalremedies to get featured on website and feed.
+</div>
 
+
+{/* Section6 */}
+<div className='my-8'>
+  <h1 className='text-center text-4xl font-bold my-4'>Recent Rewards</h1>
+<FeaturedImage/>
+</div>
+
+{/* Section7  */}
+<div className="my-8 mt-12 p-6">
+      <h1 className="text-center text-4xl font-bold my-4 text-gray-800">Stay up to Date</h1>
+      <p className="text-center text-gray-700 mb-6">
+        Enter your mobile number to receive special offers, new product previews, and the latest healthcare routine updates.
+      </p>
+      <div className="flex justify-center items-center">
+        <div className="mr-4 my-4">
+          <input 
+            type="number" 
+            className="border-2 border-gray-300 p-3 rounded-lg w-full max-w-xs outline-none focus:border-red-800"
+            placeholder="Enter your mobile number"
+          />
+        </div>
+        <button className="bg-red-800 text-white px-6 py-3 rounded-lg hover:bg-red-900 transition duration-200">
+          Subscribe
+        </button>
+      </div>
+    </div>
 
 <Footer />
-    </div>
+    </>
   );
 };
 

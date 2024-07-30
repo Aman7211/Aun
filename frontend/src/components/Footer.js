@@ -35,16 +35,24 @@ const Footer = () => {
       display: "About Us",
     },
     {
-      path: "/products",
-      display: "Products",
-    },
-    {
       path: "/blog",
       display: "Blog",
     },
+    {
+      path: "/login",
+      display: "My Account",
+    }
   ];
 
   const quickLinks02 = [
+    {
+      path: "/products",
+      display: "Classical",
+    },
+    {
+      path: "/products",
+      display: "Patents",
+    },
     {
       path: "/cart",
       display: "Cart",
@@ -52,11 +60,7 @@ const Footer = () => {
     {
       path: "/checkout",
       display: "Checkout",
-    },
-    {
-      path: "/login",
-      display: "Create Account",
-    },
+    }
    
   ];
 
@@ -76,10 +80,10 @@ const Footer = () => {
           
           </div>
           <div className='mr-[40px]'>
-            <h2 className='text-[20px] leading-[30px] font-[700] mb-2 md:mb-6 text-center md:text-left '>Quick Links</h2>
+            <h2 className='text-[20px] leading-[30px] font-[700] mb-2 md:mb-6 text-center md:text-left '>Shop</h2>
             
           <ul className='text-center'>
-            {quickLinks01.map((item, index) => (
+            {quickLinks02.map((item, index) => (
               <li key={index} className='mb-4'>
                 <Link to={item.path} className='text-[16px] leading-7 font-[400] '>
                   {item.display}
@@ -90,10 +94,10 @@ const Footer = () => {
           </div>
 
           <div className='mr-[40px]'> 
-            <h2 className='text-[20px] leading-[30px] font-[700] mb-2 md:mb-6 text-center md:text-left'>Services Offered</h2>
+            <h2 className='text-[20px] leading-[30px] font-[700] mb-2 md:mb-6 text-center md:text-left'>Quick Links</h2>
             
           <ul className='text-center'>
-            {quickLinks02.map((item, index) => (
+            {quickLinks01.map((item, index) => (
               <li key={index} className='mb-4'>
                 <Link to={item.path} className='text-[16px] leading-7 font-[400] '>
                   {item.display}
