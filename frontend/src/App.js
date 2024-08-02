@@ -7,17 +7,27 @@ import ProductDetails from './components/ProductDetail';
 import './App.css'
 import Product from './pages/Products';
 import About from './pages/About';
+import Blog from './components/Blog';
+import CartPage from './pages/Cart';
+import PrivateRoutes from './Routes/PrivateRoutes';
+import Checkout from './components/Checkout';
+import OrderSuccess from './pages/OrderSuccess';
+import OurIngredients from './pages/OurIngredients';
 
 const App = () => {
   return (
-    <div>
+    <div className='overflow-hidden'>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path="/login" element={<LoginOption />} />
         <Route path="/signup" element={<RegisterPage/>} />
         <Route path="/products" element={<Product />} />
         <Route path="/about" element={<About />} />
-
+        <Route path='/blog' element={<Blog/>} />
+        <Route path="/cart" element={<PrivateRoutes><CartPage /></PrivateRoutes>} />
+        <Route path="/Checkout" element={<PrivateRoutes><Checkout/></PrivateRoutes>} />
+        <Route path="/order-success" element={<OrderSuccess />} />
+        <Route path="/ingredient" element={<OurIngredients />} />
         <Route path="/products/:id" element={<ProductDetails />} />
       </Routes>
 </div>

@@ -16,7 +16,7 @@ import indianFederationLogo from '../assets/media/indis.jpg'
 import ISO from '../assets/media/ISO.png'
 import MINAyushLogo from '../assets/media/AAYUSH.png'
 import { FeaturedImage } from '../components/FeaturedImage';
-
+import InstagramIcon from '@mui/icons-material/Instagram';
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const banners = [banner1, banner2];
@@ -76,7 +76,7 @@ const Home = () => {
 
     {/* Section 3 */}
     <div  style={{ backgroundImage: `url(${banner3})` }} className='text-center bg-cover bg-center h-auto' >
-         <h1 className=' text-[#9d003f] pt-12 mb-2 text-3xl font-semibold'>Unani <span className='text-green-800'>
+         <h1 className=' text-[#9d003f] pt-12 mb-2 text-5xl font-bold'>Unani  <span className='text-green-800'>
           Medicines</span></h1>
           {/* <p className='text-lg'>Unani medicine derives its goodness
 from natural substances.</p> */}
@@ -167,7 +167,7 @@ to promote health and vitality through our range of herbal products.</p>
           </div>
 
 <div className='font-bold text-center text-lg'>
-  Tag us on @aunherbal remedies OR #aunherbalremedies to get featured on website and feed.
+  Tag us on <InstagramIcon/> @aunherbal remedies OR #aunherbalremedies to get featured on website and feed.
 </div>
 
 

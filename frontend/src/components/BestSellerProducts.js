@@ -30,7 +30,7 @@ const BestSellerProducts = () => {
 
   return (
     <div className="container mx-auto my-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {randomProducts.map((product) => (
           <div key={product._id} className="border rounded-lg overflow-hidden shadow-lg">
             <Link to={`/products/${product._id}`}>

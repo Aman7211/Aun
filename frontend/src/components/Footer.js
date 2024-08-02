@@ -1,7 +1,9 @@
 import {Link} from 'react-router-dom';
 import logo from '../assets/media/aun_logo.png';
 import MailIcon from '@mui/icons-material/Mail';
+import PaymentIcon from '@mui/icons-material/Payment';
 import CallIcon from '@mui/icons-material/Call';
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import { AiFillYoutube, AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
 const Footer = () => {
 
@@ -27,20 +29,20 @@ const Footer = () => {
 
   const quickLinks01 = [
     {
-      path: "/",
-      display: "Home",
+      path: "/login",
+      display: "My Account",
     },
     {
-      path: "/about",
-      display: "About Us",
+      path: "/offers",
+      display: "Offers",
     },
     {
       path: "/blog",
       display: "Blog",
     },
     {
-      path: "/login",
-      display: "My Account",
+      path: "/ingredient",
+      display: "Our Ingredients",
     }
   ];
 
@@ -128,16 +130,8 @@ const Footer = () => {
             <CallIcon className="text-white mr-2" />
             <span >9355818983</span>
           </li>
-        </ul>
-        
-          </div>
-        </div>
-      </div>
-      <div className='text-center border-t-2 bg-black text-white pb-2 '>
-      <p className='text-[16px] leading-7 font-[400] pt-4'>
-              Copyrght © {year} developed by Aun Herbal all rights reserved
-            </p>
-            <div className='flex items-center justify-center gap-3 mt-4 '>
+          <li className='font-semibold mt-10 text-left ml-7'>Follow us on : 
+          <div className='flex items-center justify-start gap-3 mt-4 text-left'>
               {socialLinks.map((link, index) => (
                 <Link to={link.path}
                 key={index}
@@ -147,6 +141,21 @@ const Footer = () => {
                 </Link>
               ))}
             </div>
+          </li>
+        </ul>
+        
+          </div>
+        </div>
+      </div>
+     
+      <div className='text-center border-t-2 bg-black text-white pb-2 '>
+  
+      <p className='text-[16px] leading-7 font-[400] pt-4'>
+              Copyrght © {year} developed by Aun Herbal all rights reserved
+            </p>
+            <div>
+        <p className='text-center my-2'>Payment Mode : <CurrencyRupeeIcon/> Cash on Delivery , <PaymentIcon/> Net Banking</p>
+      </div>
             </div>
     </footer>
   )

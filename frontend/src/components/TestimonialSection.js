@@ -15,6 +15,11 @@ const testimonials = [
     id: 3,
     name: "Shaurya",
     message:"I was suffering from lot of digestive problems but after using there zafrani chatni I feel relaxed"
+  },
+  {
+    id: 4,
+    name: "Aayush",
+    message:"I was suffering from lot of digestive problems but after using there zafrani chatni I feel relaxed"
   }
 ];
 
@@ -22,7 +27,7 @@ const TestimonialSection = () => {
   return (
     <div className="  bg-[#fbf6e7] py-3">
       <div className="container mx-auto text-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className=" bg-[#fbf6e7] border p-6 rounded-lg shadow-xl">
             

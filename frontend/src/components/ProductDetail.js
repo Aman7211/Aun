@@ -70,7 +70,7 @@ const ProductDetails = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center min-h-screen p-4 hero mb-[-20px]" style={{ backgroundImage: `url(${banner})` }}>
+      <div className="flex justify-center items-center min-h-screen p-4 hero mb-[-20px]" style={{ backgroundImage: `url(${banner})`, backgroundSize:"cover" }}>
         <button onClick={() => navigate(-1)} className="absolute flex left-10 top-10 bg-red-900 text-white p-2 rounded-full">
           <ArrowBackIcon />
         </button>

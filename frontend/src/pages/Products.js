@@ -45,7 +45,7 @@ const Product = () => {
   const { authdetails } = useContext(AppContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortByPrice, setSortByPrice] = useState("");
-  const [activeCategory, setActiveCategory] = useState("classical");
+  const [activeCategory, setActiveCategory] = useState("patent");
 
   const products = useFetchProducts(authdetails.token, sortByPrice);
 
@@ -97,7 +97,7 @@ const Product = () => {
   const classicalProducts = filteredProducts.filter(product => product.category === 'classical');
   const patentProducts = filteredProducts.filter(product => product.category === 'patent');
 
-  const productsToDisplay = activeCategory === 'classical' ? classicalProducts : patentProducts;
+  const productsToDisplay = activeCategory === 'patent' ?  patentProducts : classicalProducts;
 
   return (
     <>
@@ -125,18 +125,18 @@ const Product = () => {
           </select>
         </div>
 
-        <div className="text-center my-6">
-          <button
-            className={`mx-2 p-3 bg-green-800 text-white rounded-xl font-semibold ${activeCategory === 'classical' ? 'bg-red-900' : ''}`}
-            onClick={() => setActiveCategory('classical')}
-          >
-            Classical Products
-          </button>
+        <div className="text-center my-6 mb-12">
           <button
             className={`mx-2 p-3 bg-green-800 text-white rounded-xl font-semibold ${activeCategory === 'patent' ? 'bg-red-900' : ''}`}
             onClick={() => setActiveCategory('patent')}
           >
             Patent Products
+          </button>
+          <button
+            className={`mx-2 p-3 bg-green-800 text-white rounded-xl font-semibold ${activeCategory === 'classical' ? 'bg-red-900' : ''}`}
+            onClick={() => setActiveCategory('classical')}
+          >
+            Classical Products
           </button>
         </div>
 

@@ -1,49 +1,53 @@
 import React from "react";
+import image01 from '../assets/media/21.jpeg';
+import image02 from '../assets/media/22.jpeg';
+import image03 from '../assets/media/23.jpeg';
+import image04 from '../assets/media/24.jpeg';
+import image05 from '../assets/media/25.jpeg';
+import image06 from '../assets/media/26.jpeg';
+import image07 from '../assets/media/27.jpeg';
+
 export function FeaturedImage() {
   const data = [
-    {
-      imgelink:
-        "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    },
-    {
-      imgelink:
-        "https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    },
-    {
-      imgelink:
-        "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
-    },
-    {
-      imgelink:
-        "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
-    },
-    {
-      imgelink:
-        "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
-    },
+    { imgelink: image01 },
+    { imgelink: image02 },
+    { imgelink: image03 },
+    { imgelink: image04 },
+    { imgelink: image05 },
+    { imgelink: image06 },
+    { imgelink: image07 },
   ];
- 
-  const [active, setActive] = React.useState(
-    "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-  );
- 
+
+  const [activeImages, setActiveImages] = React.useState([image01, image02]);
+
+  const handleThumbnailClick = (imgelink, index) => {
+    setActiveImages(prevState => {
+      const newActiveImages = [...prevState];
+      newActiveImages[index] = imgelink;
+      return newActiveImages;
+    });
+  };
+
   return (
     <div className="grid gap-4">
-      <div>
-        <img
-          className="h-auto w-full max-w-full rounded-lg object-cover object-center md:h-[480px]"
-          src={active}
-          alt=""
-        />
+      <div className="flex justify-between">
+        {activeImages.map((img, index) => (
+          <img
+            key={index}
+            className="h-auto w-1/2 rounded-lg cover md:h-[600px] mx-1"
+            src={img}
+            alt=""
+          />
+        ))}
       </div>
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-7 gap-4">
         {data.map(({ imgelink }, index) => (
-          <div key={index}>
+          <div key={index} className="mx-2">
             <img
-              onClick={() => setActive(imgelink)}
+              onClick={() => handleThumbnailClick(imgelink, index % 2)}
               src={imgelink}
-              className="h-20 max-w-full cursor-pointer rounded-lg object-cover object-center"
-              alt="gallery-image"
+              className="h-[100px] w-full cursor-pointer rounded-lg object-cover object-center"
+              alt="gallery-thumbnail"
             />
           </div>
         ))}
