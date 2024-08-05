@@ -105,28 +105,6 @@ we believe that health is not merely the absence of disease but a state of compl
             </div>
           </div>
 
-
-    {/* <div className='flex container mx-auto'>
-<div className='bg-cover bg-center w-[70%]'>
-<p className='mt-20 text-5xl mx-10 font-extrabold'>Committed to </p>
-<p className='text-5xl mt-4 relative mx-10 my-2 z-10 font-extrabold'><span className='text-[#9d003f] text-4xl'>Nation</span> Building </p>
-<img src={style} alt="" className='mt-[-41px] '/>
-</div>
-<div lassName='w-[30%]'>
-<p className=' mt-20 text-xl font-medium'>
-  Welcome to Aun Herbal, where nature meets wellness. <br/>
-We are passionate about harnessing the power of <br/>nature 
-to promote health and vitality through our range of herbal products.</p>
-<button className='bg-[#9d003f] p-3 text-white text-xl my-10 rounded-lg'>
-  About Our Legacy
-</button>
-</div>
-
-    </div> */}
-
-
-    {/* Section5 */}
-
     <div className="text-center my-[60px]">
             <div>
               <h1 className="text-[40px] mt-10 md:text-[40px] text-gray-800 font-extrabold ">Our Product Range</h1>

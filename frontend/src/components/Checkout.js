@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import banner from '../assets/media/photo.png';
+import Header from './Header';
+import Footer from './Footer';
 
 const CheckoutPage = () => {
   const totalPrice = parseFloat(localStorage.getItem('totalPrice')) || 0;
@@ -32,7 +34,7 @@ const CheckoutPage = () => {
   const fetchSavedAddresses = async () => {
     try {
       const userId = localStorage.getItem('userId');
-      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/addresses/${userId}`);
+      const response = await fetch(`http://localhost:4000/api/addresses/${userId}`);
       if (response.ok) {
         const data = await response.json();
         setAddresses(data);
@@ -48,7 +50,7 @@ const CheckoutPage = () => {
     e.preventDefault();
     try {
       const userId = localStorage.getItem('userId');
-      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/addresses`, {
+      const response = await fetch(`http://localhost:4000/api/addresses`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -81,7 +83,7 @@ const CheckoutPage = () => {
 
   const handleDeleteAddress = async (addressId) => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/addresses/${addressId}`, {
+      const response = await fetch(`http://localhost:4000/api/addresses/${addressId}`, {
         method: 'DELETE',
       });
       if (response.ok) {
@@ -97,7 +99,7 @@ const CheckoutPage = () => {
   const handleCheckout = async () => {
     try {
       const userId = localStorage.getItem('userId');
-      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/payment/checkout`, {
+      const response = await axios.post(`http://localhost:4000/payment/checkout`, {
         Email : userEmail,
         products : cartItems,
         amount,
@@ -120,13 +122,15 @@ const CheckoutPage = () => {
   }
 
   return (
-    <div className="container mx-auto p-4" style={{ backgroundImage: `url(${banner})`, backgroundSize:"cover" }}>
-      <div className="flex flex-col lg:flex-row lg:space-x-4">
+    <>
+    <Header />
+    <div className="" style={{ backgroundImage: `url(${banner})`, backgroundSize:"cover" }}>
+      <div className="p-8 container mx-auto flex flex-col lg:flex-row lg:space-x-4">
         <div className="lg:w-2/3 mt-4">
           <h2 className="text-center">Shipping Address</h2>
           <p className="text-center">*Please save only one address at a time*</p>
           <form onSubmit={handleAddressSubmit} className="bg-white p-4 rounded-lg shadow-md">
-            <h3 className="text-center font-bold">Email: {userEmail}</h3>
+            <h3 className="text-center font-bold my-4">Email: {userEmail}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="form-group">
                 <label htmlFor="name">Full Name:</label>
@@ -258,6 +262,8 @@ const CheckoutPage = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

@@ -6,7 +6,7 @@ const OrderSuccess = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 hero mb-[-20px]" style={{ backgroundImage: `url(${banner})`, backgroundSize:"cover"}} >
       <div className="bg-white p-8 rounded-lg shadow-md text-center">
-        <CheckCircleIcon className='text-green-800 my-4'style={{ fontSize: '50px' }}/>
+        <CheckCircleIcon className='text-green-800 my-4' style={{ fontSize: '50px' }}/>
         <h1 className="text-3xl font-bold text-gray-800 mb-4">Order Placed Successfully!</h1>
         <p className="text-gray-600 mb-6">Thank you for your purchase. Your order has been placed successfully.</p>
         <p className="text-gray-600 mb-6">We Will Send You Confirmation Mail Shortly.</p>

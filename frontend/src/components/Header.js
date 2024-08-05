@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/media/aun_logo.png';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MenuIcon from '@mui/icons-material/Menu';
+import { AppContext } from '../authcontext/AppContext';
+import LogoutIcon from '@mui/icons-material/Logout';
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const token = localStorage.getItem('token');
+  const { logout } = useContext(AppContext);
   const handleToggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -60,6 +64,11 @@ const Header = () => {
                 Blogs
               </Link>
             </li>
+            <li>
+              <Link to="/ingredient" className="hover:text-gray-400 py-2 md:py-0">
+                Our Ingredients
+              </Link>
+            </li>
           </ul>
         </nav>
         <div className="absolute left-1/2 transform -translate-x-1/2">
@@ -74,11 +83,16 @@ const Header = () => {
                 Contact
               </Link>
             </li>
-            <li>
+          {!token ? ( <li>
               <Link to="/login" className="hover:text-gray-400 py-2 md:py-0 text-2xl">
                 <AccountCircleIcon/>
               </Link>
-            </li>
+            </li>):(<li>
+              <button onClick={()=>logout()} className="text-red-800 hover:text-red-900 py-2 md:py-0 text-2xl">
+                <LogoutIcon/>
+                <div></div>
+              </button>
+            </li>)} 
           </ul>
         </nav>
       </div>

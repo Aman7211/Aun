@@ -361,8 +361,136 @@ Patients with chronic liver illnesses such as cirrhosis, enlarged liver, and spl
 Asthmatic patients can also benefit from Noshadar as it reduces the inflammation in the lungs, controls cough and allergies. 
 
 `
-    }
+    },
+    {
+        name:'KAMAL KESAR',
+        letter:'K',
+        image:'https://t4.ftcdn.net/jpg/02/70/56/61/360_F_270566121_YTi7KmKm3PhkLkZNZOZ1flZOOGtruCHI.jpg',
+        desc:`KAMAL KESAR – Desi Jadi Buti – Indian Lotus has been used since the time if Sushruta. Its seeds, seed pod and petals have been widely used in Ayurvedic treatments for its severla health benefits. 
+Kamal Kesar is an emergent aquatic plant with a wide range of distribution in the Old World throughout temperate and tropical Asia. The other species in the Nelumbonaceae is the American lotus, occurring in North America. The bowl-shaped flowers are hermaphroditic, solitary and large, up to 25 cm in diameter, with intense odors during anthesis. 
+`,
+        uses:`The presence of vitamin B and C in helps in getting the perfect glow on your skin and smooth hair.
+Heals Flaky and Dry Skin
+It is also said to calm down the nerves and even lighten up the mood.
+`
+    },
+    {
+        name:'Kashmiri Saffron',
+        letter:'K',
+        image:'https://www.aljazeera.com/wp-content/uploads/2013/11/20131125121825701607_8.jpeg',
+        desc:`Kashmiri Saffron is one of the most expensive spices in the world. Kesar (Saffron) promotes learning and memory retention.
+Kesar is also known as “saffron.” It is a super food used in various delicacies to enhance flavor and color. Also, it offers amazing health & beauty benefits such as improving visual performance, improves immunity & digestion. Moreover, it holds natural properties to brighten up the skin and improve its quality, thus it is used in many of the products as well.`,
+        uses:`May improve mood and treat depressive symptoms.
+May have cancer-fighting properties.
+May reduce appetite and aid weight loss.`
+    },
+    {
+        name:'Pudhina/ Mint Leaves',
+        letter:'P',
+        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTgzgdNgdwJsNLGjgDTgd69B-kzG-r9dp1Mg&s',
+        desc:`Mint leaves also known as Pudina are a popular aromatic herb for its freshness with several health benefits. Since ancient times, people have used different types of mints all over the world.
 
+Mint leaves are packed with antioxidants and phytonutrients, and contains vitamin A, vitamin C, and B-complex, phosphorous, calcium, and has anti-bacterial properties
+It is one of the rich sources of iron, potassium, and manganese which improves haemoglobin levels and promotes brain function.
+
+`,
+        uses:`Relieve  Irritable Bowel Syndrome.
+ Improve Respiratory Complaints.
+Beats Stress & Depression.
+`
+    },
+    {
+        name:'Peepal Leaf',
+        letter:'P',
+        image:'https://media.istockphoto.com/id/489427609/photo/green-pipal-or-bo-leaf-isolated-on-white.jpg?s=612x612&w=0&k=20&c=Af4h3HJtbcPF_aunTbem-mZPSZBCykCt1FfOEKyMZ8E=',
+        desc:`The peepal tree is considered the mythical ‘Tree of Life’ or ‘World Tree’ of the Indian subcontinent. The peepal tree, also called Ficus religiosa, belonging to the family Moraceae, is a variation of the fig tree known as the bodhi tree.
+Traditionally, the leaf juice of the peepal tree may be helpful for cough, asthma, diarrhoea, ear pain, toothache, haematuria (blood in urine), migraine, scabies, eye troubles, and gastric problems. The stem bark of the peepal tree might help with paralysis, gonorrhoea, bone fractures, diarrhoea, and diabetes. 
+`,
+        uses:`It may have an analgesic (pain-killing) property.
+It might help as a kidney-protective agent.
+It might act as an antioxidant.
+`
+    },
+    {
+        name:'Parijat',
+        letter:'P',
+        image:'https://m.media-amazon.com/images/I/81wf+nVs17L.jpg',
+        desc:`Parijat is a wonderful plan in Ayurveda particularly known for its enormous health benefits. Due to its broad-spectrum medicinal properties, it has become a matter of interest for research.  
+
+In Ayurveda, Parijat leaves has been used to treat a different kind of fevers, cough, arthritis, worm infestation, etc. The leaves juice is bitter and works as a tonic. The kadha or decoction is excellent for arthritis, constipation, worm infestation.
+`,
+        uses:`Treats various types of fever.
+Treat arthritic knee pain and sciatica. 
+Diabetes Control.
+`
+    },
+    {
+        name:'Rasot',
+        letter:'R',
+        image:'https://5.imimg.com/data5/SELLER/Default/2021/3/TL/QP/NI/117136284/rasaut-rasot-.png',
+        desc:`Rasot can help with fatigue, lightheadedness, and respiratory issues like asthma and congestion. The Ayurvedic herb Rasot is also helpful for many other conditions, including fever, nausea, vomiting, arthritis, and back pain. 
+
+It is the most effective natural treatment for measles, different skin issues, and urinary tract infections. dosage: follow a doctor's instructions. It effectively treats the disease's primary cause and quickly alleviates symptoms like indigestion. The likelihood of the disease or its symptoms returning is quite low.
+`,
+        uses:`This herb's paste can be used externally, especially, to lessen discomfort and inflammation. This herb works best for conditions affecting the eyes.
+It has anti-diabetic properties as well. This herb's root powder stimulates the production of additional insulin and shields the body from the negative consequences of diabetes.  
+It naturally protective and combats liver toxicity. In patients with jaundice, it produces excellent results.
+`
+    },
+    {
+        name:'Revand Chini',
+        letter:'R',
+        image:'https://5.imimg.com/data5/FR/WO/LC/SELLER-91223541/revand-chini-500x500.jpg',
+        desc:`Revand Chini, also known as Himalayan Rhubarb or Rheum australe, is a perennial herb widely used in Ayurveda for its medicinal properties.
+
+ This herb offers numerous health benefits. However, be aware of precautions and potential side effects of its consumption. This article will explore the Ayurvedic perspective on Himalayan Rhubarb, discussing its uses, protection, and possible side effects.
+`,
+        uses:` Revand Chini is believed to have detoxifying effects on the body. It helps eliminate accumulated toxins and purifies the blood.
+Revand Chini is known for its potent digestive properties. It helps improve digestion, stimulates appetite, and relieves symptoms of indigestion, bloating, and constipation.
+It is commonly used in Ayurveda to address menstrual irregularities and discomfort. It helps regulate hormonal balance, reduce menstrual cramps, and promote regular menstruation. 
+`
+    },
+    {
+        name:'Salab Mishri',
+        letter:'S',
+        image:'https://m.media-amazon.com/images/I/71rU9dP64iL.jpg',
+        desc:`Salab Mishri is one of the spices that is generally excellent and is exceptionally viable in advancing sexual wellbeing.
+It is a herb that is known to act as a nervine tonic. It helps in improving the overall wellbeing and sexual performance of men. It can also be useful when dealing with mental health issues like anxiety and depression. This herb helps in reducing neurogenic stress and strengthening muscles.`,
+        uses:`Improves enegy level.
+Helps in sexual shortcoming.
+ Further develops moxie.
+Advances sound spermatogenesis.
+ Further develops testosterone creation.
+`
+    },
+    {
+        name:'Shilajit',
+        letter:'S',
+        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlYljDBGflsTyCM6O91A9p2w-xFblOgAo0pQ&s',
+        desc:`Shilajit resin is a supplement common in Ayurvedic medicine. It contains antioxidants and may offer other health benefits for people with some health conditions, though more research is needed.
+
+Shilajit is a sticky substance found primarily in the rocks of the Himalayas. It develops over centuries from the slow decomposition of plants.
+Shilajit is commonly used in Ayurvedic medicine. It’s an effective and safe supplement that can have a positive effect on your overall health and well-being.
+`,
+        uses:`Raise testosterone
+Treat chronic fatigue syndrome
+Slow aging
+ Reduce altitude sickness
+`
+    },
+    {
+        name:'WHITE SANDALWOOD',
+        letter:'W',
+        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHj_6lADcHpAse3dr3JzHJj0s_Onm-2lJuOw&s',
+        desc:`White sandalwood is an evergreen tree. The oil from the wood and the wood are used as medicine.
+White sandalwood is used for treating the common cold, cough, bronchitis, fever, and sore mouth and throat. It is also used to treat urinary tract infections (UTIs), liver disease, gallbladder problems, heatstroke, gonorrhea, headache, and conditions of the heart and blood vessels (cardiovascular disease).`,
+        uses:`It may be used due to its antioxidant activity
+It may have anti-inflammatory properties
+It may have anti-proliferative (inhibit cell growth) activity
+It may show anti-microbial properties
+
+`
+    },
     // add more items when available
 
 ];

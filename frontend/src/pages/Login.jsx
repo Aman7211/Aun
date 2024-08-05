@@ -30,9 +30,11 @@ const Login = () => {
       const data = await response.json();
 
       if (response.ok) {
-        const tokenExpiry = new Date().getTime() + 3600000; // One hour expiry time
+        const token = data.token;
+        console.log(token);
+        console.log(data);
         login(data.token, data.userId);
-        localStorage.setItem("tokenExpiry", tokenExpiry);
+        localStorage.setItem("token", token);
         localStorage.setItem("userEmail", email);
         toast.success("User logged in Successfully and Logged is Valid only for 1 hour");
         navigate("/");

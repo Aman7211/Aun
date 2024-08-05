@@ -1,14 +1,15 @@
 import React from 'react';
 
-const Alphabet = ({ onSelectLetter }) => {
-    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+const Alphabet = ({ onSelectLetter, alphabetWithIngredients }) => {
     return (
         <div className="flex flex-wrap justify-center mx-3">
-            {alphabet.map(letter => (
+            {alphabetWithIngredients.map(({ letter, hasIngredients }) => (
                 <button 
                     key={letter} 
-                    onClick={() => onSelectLetter(letter)}
-                    className="mx-1 px-[14px] py-2 bg-[#63082c] text-white rounded-xl my-4">
+                    onClick={() => hasIngredients && onSelectLetter(letter)}
+                    className={`mx-1 px-[14px] py-2 rounded-xl my-4 ${hasIngredients ? 'bg-[#63082c] text-white ' : 'bg-gray-400 text-gray-800 cursor-not-allowed'}`}
+                    disabled={!hasIngredients}
+                >
                     {letter}
                 </button>
             ))}
