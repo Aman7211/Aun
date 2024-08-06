@@ -130,8 +130,8 @@ const Footer = () => {
             <CallIcon className="text-white mr-2" />
             <span >9355818983</span>
           </li>
-          <li className='font-semibold mt-10 text-left ml-7'>Follow us on : 
-          <div className='flex items-center justify-start gap-3 mt-4 text-left'>
+          <li className='font-semibold mt-10 text-center md:text-left ml-7'>Follow us on : 
+          <div className='flex items-center justify-center md:justify-start gap-3 mt-4 text-left'>
               {socialLinks.map((link, index) => (
                 <Link to={link.path}
                 key={index}

@@ -1,15 +1,13 @@
 import React, { useContext, useState } from "react";
 import { AppContext } from "../authcontext/AppContext";
 import {  useNavigate } from "react-router-dom";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
 import toast from "react-hot-toast";
 
 const Login = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState();
   const { login } = useContext(AppContext);
   const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false)
   // Check if token is expired after one hour
 
   const handleLogin = async () => {
@@ -17,6 +15,7 @@ const Login = () => {
       email,
       password,
     };
+    console.log(userDetails);
 
     try {
       const response = await fetch(`http://localhost:4000/api/login`, {
@@ -36,7 +35,7 @@ const Login = () => {
         login(data.token, data.userId);
         localStorage.setItem("token", token);
         localStorage.setItem("userEmail", email);
-        toast.success("User logged in Successfully and Logged is Valid only for 1 hour");
+        toast.success("User logged in Successfully");
         navigate("/");
       } else {
         console.error("Login failed:", data.error);
@@ -72,30 +71,20 @@ const Login = () => {
           </label>
           <label className="relative">
             <p className="mb-1 text-[1rem] leading-[1.375rem]  font-medium">
-              Password <sup className="text-red-500 text-sm">*</sup>
+              Mobile Number <sup className="text-red-500 text-sm">*</sup>
             </p>
             <input
               required
-              type={showPassword ? "text" : "password"}
+              type="number"
               name="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter Password"
+              placeholder="Enter Mobile  Number"
               style={{
                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
               }}
               className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5 border-2 border-blue-50"
             />
-            <span
-              onClick={() => setShowPassword((prev) => !prev)}
-              className="absolute right-3 top-[38px] z-[10] cursor-pointer"
-            >
-              {showPassword ? (
-                <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
-              ) : (
-                <AiOutlineEye fontSize={24} fill="#AFB2BF" />
-              )}
-            </span>
   
           </label>
           <button

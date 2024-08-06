@@ -8,6 +8,7 @@ import image06 from '../assets/media/26.jpeg';
 import image07 from '../assets/media/27.jpeg';
 
 export function FeaturedImage() {
+
   const data = [
     { imgelink: image01 },
     { imgelink: image02 },
@@ -42,11 +43,11 @@ export function FeaturedImage() {
       </div>
       <div className="grid grid-cols-7 gap-4">
         {data.map(({ imgelink }, index) => (
-          <div key={index} className="mx-2">
+          <div key={index} className="md:mx-2">
             <img
               onClick={() => handleThumbnailClick(imgelink, index % 2)}
               src={imgelink}
-              className="h-[100px] w-full cursor-pointer rounded-lg object-cover object-center"
+              className="h-[50px] md:h-[100px] w-full cursor-pointer rounded-lg object-cover object-center"
               alt="gallery-thumbnail"
             />
           </div>

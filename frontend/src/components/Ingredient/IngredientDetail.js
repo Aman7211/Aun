@@ -17,14 +17,14 @@ const IngredientDetail = ({ ingredient, onClose }) => {
                 <ArrowBackIcon />
             </button>
             <div className="bg-white p-8 rounded h-[100vh] w-[100vw]">
-                <h2 className="text-6xl text-center font-bold my-7 mt-10">{ingredient.name}</h2>
-                <div className='flex'>
-                    <div className='w-[60%]'>
-                        <p className="mt-4">{formatContent(ingredient.desc, '\n')}</p>
+                <h2 className="text-2xl md:text-6xl mt-8 text-center font-bold md:my-7 md:mt-10">{ingredient.name}</h2>
+                <div className='flex flex-col md:flex-row'>
+                    <div className='w-[100%] md:w-[60%]'>
+                        <p className="mt-4 text-sm md:text-xl">{formatContent(ingredient.desc, '\n')}</p>
                         <h1 className='my-4 text-xl font-bold'>Uses & Benefits:</h1>
-                        <p className="mt-4">{formatContent(ingredient.uses, '\n')}</p>
+                        <p className="mt-4 text-sm md:text-xl">{formatContent(ingredient.uses, '\n')}</p>
                     </div>
-                    <div className='w-[40%] ml-5'>
+                    <div className='w-[100%] md:w-[40%] md:ml-5'>
                         <img src={ingredient.image} alt={ingredient.name} className="h-[400px] w-[500px] flex justify-end mt-4 rounded-3xl"/>
                     </div>
                 </div>

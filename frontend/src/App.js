@@ -13,6 +13,7 @@ import PrivateRoutes from './Routes/PrivateRoutes';
 import Checkout from './components/Checkout';
 import OrderSuccess from './pages/OrderSuccess';
 import OurIngredients from './pages/OurIngredients';
+import Contact from './pages/Contact';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path='/blog' element={<Blog/>} />
         <Route path="/cart" element={<PrivateRoutes><CartPage /></PrivateRoutes>} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/Checkout" element={<PrivateRoutes><Checkout/></PrivateRoutes>} />
         <Route path="/order-success" element={<OrderSuccess />} />
         <Route path="/ingredient" element={<OurIngredients />} />

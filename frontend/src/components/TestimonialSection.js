@@ -25,12 +25,11 @@ const testimonials = [
 
 const TestimonialSection = () => {
   return (
-    <div className="  bg-[#fbf6e7] py-3">
+    <div className="bg-[#fbf6e7] py-3">
       <div className="container mx-auto text-center">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className=" bg-[#fbf6e7] border p-6 rounded-lg shadow-xl">
-            
+            <div key={testimonial.id} className="bg-[#fbf6e7] border p-6 rounded-lg shadow-xl">
               <h3 className="text-xl font-semibold mb-2">{testimonial.name}</h3>
               <p className="text-gray-700">{testimonial.message}</p>
             </div>

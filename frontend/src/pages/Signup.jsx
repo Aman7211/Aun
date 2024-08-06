@@ -52,8 +52,8 @@ const RegisterPage = () => {
                         <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="exampleInputPassword1" className="form-label mb-1 text-[1rem] leading-[1.375rem] font-medium"> Password<sup className="text-red-500 text-sm">*</sup></label>
-                        <input type="password" id="exampleInputPassword1" name='password' value={formData.password} onChange={onchange} placeholder='Enter Password' style={{
+                        <label htmlFor="exampleInputPassword1" className="form-label mb-1 text-[1rem] leading-[1.375rem] font-medium"> Mobile Number<sup className="text-red-500 text-sm">*</sup></label>
+                        <input type="number" id="exampleInputPassword1" name='password' value={formData.password} onChange={onchange} placeholder='Enter Password' style={{
                             boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
                         }}
                             className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5 border-2 border-blue-50 " />

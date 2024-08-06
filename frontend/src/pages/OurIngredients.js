@@ -43,11 +43,11 @@ const OurIngredients = () => {
         <>
             <Header />
             <div className='bg-yellow-100 py-10'>
-                <div className='container mx-auto'>
+                <div className='mx-4 container md:mx-auto'>
                     <span className='underline underline-offset-8 font-medium text-lg'>
                         Our Ingredient
                     </span>
-                    <h1 className='my-3 text-5xl leading-relaxed'>
+                    <h1 className='my-3 text-3xl md:text-5xl md:leading-relaxed'>
                         Our Ingredients are all fresh,<br />
                         pure and patent.
                     </h1>
