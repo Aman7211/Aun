@@ -39,7 +39,7 @@ const Login = () => {
         navigate("/");
       } else {
         console.error("Login failed:", data.error);
-        toast.error("Login Failed !! Please check the credential and logged in again.");
+        toast.error("Login Failed !!   Please create your account.");
       }
     } catch (error) {
       console.log(error);

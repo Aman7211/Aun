@@ -14,12 +14,12 @@ const testimonials = [
   {
     id: 3,
     name: "Shaurya",
-    message:"I was suffering from lot of digestive problems but after using there zafrani chatni I feel relaxed"
+    message:"I was suffering from many digestive problems due to which i tried zafrani chatni of aunherbal remedies. After using zafrani chatni I feel awesome in just few days and suggest to try this once."
   },
   {
     id: 4,
-    name: "Aayush",
-    message:"I was suffering from lot of digestive problems but after using there zafrani chatni I feel relaxed"
+    name: "Aayush Goyal",
+    message:"Mujhe piles ki problem thi jis wajah se maine habbe bawaseer badi ka use kiya sahi me isse accha product maine nhi dekha mujhe itching se rahat mila or saath hi me pain se bhi. ab me iss product ko daily use krta hu."
   }
 ];
 

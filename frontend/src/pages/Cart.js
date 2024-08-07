@@ -2,7 +2,7 @@ import banner from '../assets/media/photo.png';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import toast from 'react-hot-toast';
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -23,7 +23,7 @@ const CartPage = () => {
       setCartItems(response.data);
       calculateTotalPrice(response.data); // Calculate total price separately
     } catch (error) {
-      console.error("Error fetching cart items:", error);
+      toast.error("Error fetching cart items:", error);
     }
   };
 
@@ -51,7 +51,7 @@ const CartPage = () => {
       );
       fetchCartItems();
     } catch (error) {
-      console.error("Error updating quantity:", error);
+      toast.error("Error updating quantity:", error);
     }
   };
 
@@ -124,7 +124,7 @@ const CartPage = () => {
       );
       fetchCartItems();
     } catch (error) {
-      console.error("Error removing cart item:", error);
+      toast.error("Error removing cart item:", error);
     }
   };
 

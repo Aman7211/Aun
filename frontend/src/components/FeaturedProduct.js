@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
 const FeaturedProduct = () => {
   const [randomProducts, setRandomProducts] = useState([]);
 
@@ -17,10 +19,10 @@ const FeaturedProduct = () => {
           const selectedProducts = [fetchedProducts[4], fetchedProducts[6], fetchedProducts[7], fetchedProducts[5],fetchedProducts[11], fetchedProducts[16]];
           setRandomProducts(selectedProducts);
         } else {
-          console.error('Failed to fetch products');
+          toast.error('Failed to fetch products');
         }
       } catch (error) {
-        console.error('Error fetching products:', error);
+        toast.error('Error fetching products:', error);
       }
     };
 

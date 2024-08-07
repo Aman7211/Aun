@@ -4,7 +4,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import PaymentIcon from '@mui/icons-material/Payment';
 import CallIcon from '@mui/icons-material/Call';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
-import { AiFillYoutube, AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
+import { AiFillYoutube, AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+
 const Footer = () => {
 
 

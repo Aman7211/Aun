@@ -28,10 +28,10 @@ const useFetchProducts = (token, sortByPrice) => {
           }
           setProducts(sortedProducts);
         } else {
-          console.error("Failed to fetch products");
+          toast.error("Failed to fetch products");
         }
       } catch (error) {
-        console.error("Error fetching products:", error);
+        toast.error("Error fetching products:", error);
       }
     };
 
@@ -78,7 +78,7 @@ const Product = () => {
         toast.error("Error in adding Product Kindly try again");
       }
     } catch (error) {
-      console.error("Error adding product to cart:", error);
+      toast.error("Error adding product to cart:", error);
     }
   };
 

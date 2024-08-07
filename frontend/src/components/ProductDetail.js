@@ -25,10 +25,10 @@ const ProductDetails = () => {
         if (response.status === 200) {
           setProduct(response.data);
         } else {
-          console.error('Failed to fetch product details');
+          toast.error('Failed to fetch product details');
         }
       } catch (error) {
-        console.error('Error fetching product details:', error);
+        toast.error('Error fetching product details:', error);
       }
     };
 
@@ -39,7 +39,7 @@ const ProductDetails = () => {
     try {
       const token = authdetails.token;
       if (!token) {
-        toast.success("Please login to add products to your cart.");
+        toast.error("Please login to add products to your cart.");
         return;
       }
 
@@ -64,7 +64,7 @@ const ProductDetails = () => {
         toast.error("Error in adding Product Kindly try again");
       }
     } catch (error) {
-      console.error("Error adding product to cart:", error);
+      toast.error("Error adding product to cart:", error);
     }
   };
 

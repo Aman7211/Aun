@@ -2,6 +2,7 @@ import { React, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FaqList from '../components/FAQ/Faqlist';
+import toast from 'react-hot-toast';
 import contactimg from '../assets/media/contact1.png'
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -22,7 +23,7 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form data submitted:', formData);
+        toast.success('Form data submitted');
         setIsSubmitted(true);
         setFormData({ name: '', email: '', message: '' });
     };
@@ -37,7 +38,7 @@ const Contact = () => {
                 
                 {/* Contact Us Section */}
                 <section className="py-10 bg-gray-50">
-                    <div className="relative top-[100px] md:top-[230px] z-20 container mx-auto px-4 md:px-8">
+                    <div className="relative top-[100px] md:top-[230px] z-10 container mx-auto px-4 md:px-8">
                         <div className="flex flex-col md:flex-row md:space-x-12">
                             <div className="md:w-full bg-white p-6 rounded-lg shadow-lg">
                                 <h2 className="text-2xl font-semibold text-gray-700 mb-4">Get in Touch</h2>

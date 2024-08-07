@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import toast from 'react-hot-toast';
 const BestSellerProducts = () => {
   const [products, setProducts] = useState([]);
   const [randomProducts, setRandomProducts] = useState([]);
@@ -18,10 +18,10 @@ const BestSellerProducts = () => {
           const selectedProducts = [fetchedProducts[0], fetchedProducts[1], fetchedProducts[8]];
           setRandomProducts(selectedProducts);
         } else {
-          console.error('Failed to fetch products');
+          toast.error('Failed to fetch products');
         }
       } catch (error) {
-        console.error('Error fetching products:', error);
+        toast.error('Error fetching products:', error);
       }
     };
 

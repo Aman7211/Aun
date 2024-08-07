@@ -39,10 +39,10 @@ const CheckoutPage = () => {
         const data = await response.json();
         setAddresses(data);
       } else {
-        console.error('Failed to fetch addresses:', response.statusText);
+        toast.error('Failed to fetch addresses:', response.statusText);
       }
     } catch (error) {
-      console.error('Error fetching addresses:', error);
+      toast.error('Error fetching addresses:', error);
     }
   };
 
@@ -74,10 +74,10 @@ const CheckoutPage = () => {
         localStorage.setItem('userAddress', JSON.stringify(data));
         fetchSavedAddresses();
       } else {
-        console.error('Failed to save address:', response.statusText);
+        toast.error('Failed to save address:', response.statusText);
       }
     } catch (error) {
-      console.error('Error saving address:', error);
+      toast.error('Error saving address:', error);
     }
   };
 
@@ -89,10 +89,10 @@ const CheckoutPage = () => {
       if (response.ok) {
         fetchSavedAddresses();
       } else {
-        console.error('Failed to delete address:', response.statusText);
+        toast.error('Failed to delete address:', response.statusText);
       }
     } catch (error) {
-      console.error('Error deleting address:', error);
+      toast.error('Error deleting address:', error);
     }
   }
 
@@ -122,7 +122,7 @@ const CheckoutPage = () => {
         toast.error("Failed to Create Your Order. Kindly try after some time");
       }
     } catch (error) {
-      console.error('Error placing order:', error);
+      toast.error('Error placing order:', error);
     }
   }
 
