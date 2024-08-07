@@ -15,7 +15,7 @@ const CartPage = () => {
   const fetchCartItems = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get(`http://localhost:4000/api/cart/cart-items/${userId}`, {
+      const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/cart/cart-items/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -41,7 +41,7 @@ const CartPage = () => {
   const updateQuantity = async (productId, newQuantity) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.put(`http://localhost:4000/api/cart/update-cart-item-quantity`,
+      await axios.put(`${process.env.REACT_APP_BASE_URL}/api/cart/update-cart-item-quantity`,
         { userId, productId, quantity: newQuantity },
         {
           headers: {
@@ -115,7 +115,7 @@ const CartPage = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.delete(
-        `http://localhost:4000/api/cart/remove-from-cart/${userId}/${productId}`,
+        `${process.env.REACT_APP_BASE_URL}/api/cart/remove-from-cart/${userId}/${productId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -13,7 +13,7 @@ const useFetchProducts = (token, sortByPrice) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/api/products`, {
+        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/products`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -63,7 +63,7 @@ const Product = () => {
         quantity: 1,
       };
 
-      const response = await axios.post(`http://localhost:4000/api/cart/add-to-cart`,
+      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/cart/add-to-cart`,
         payload,
         {
           headers: {

@@ -34,7 +34,7 @@ const CheckoutPage = () => {
   const fetchSavedAddresses = async () => {
     try {
       const userId = localStorage.getItem('userId');
-      const response = await fetch(`http://localhost:4000/api/addresses/${userId}`);
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/addresses/${userId}`);
       if (response.ok) {
         const data = await response.json();
         setAddresses(data);
@@ -50,7 +50,7 @@ const CheckoutPage = () => {
     e.preventDefault();
     try {
       const userId = localStorage.getItem('userId');
-      const response = await fetch(`http://localhost:4000/api/addresses`, {
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/addresses`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ const CheckoutPage = () => {
 
   const handleDeleteAddress = async (addressId) => {
     try {
-      const response = await fetch(`http://localhost:4000/api/addresses/${addressId}`, {
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/addresses/${addressId}`, {
         method: 'DELETE',
       });
       if (response.ok) {
@@ -99,7 +99,7 @@ const CheckoutPage = () => {
   const handleCheckout = async () => {
     try {
       const userId = localStorage.getItem('userId');
-      const response = await axios.post(`http://localhost:4000/payment/checkout`, {
+      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/payment/checkout`, {
         Email: userEmail,
         products: cartItems,
         amount,

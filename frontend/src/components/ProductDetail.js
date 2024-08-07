@@ -17,7 +17,7 @@ const ProductDetails = () => {
     const fetchProductDetails = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://localhost:4000/api/products/${id}`, {
+        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/products/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -49,7 +49,7 @@ const ProductDetails = () => {
         quantity: 1,
       };
 
-      const response = await axios.post(`http://localhost:4000/api/cart/add-to-cart`,
+      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/cart/add-to-cart`,
         payload,
         {
           headers: {

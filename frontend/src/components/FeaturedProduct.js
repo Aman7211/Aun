@@ -10,7 +10,7 @@ const FeaturedProduct = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/api/products`);
+        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/products`);
         if (response.status === 200) {
           const fetchedProducts = response.data;
           console.log(response)
